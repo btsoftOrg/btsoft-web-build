@@ -1,9 +1,11 @@
+/* Tipografía global */
 *,
 *::before,
 *::after {
   font-family: 'Montserrat', sans-serif !important;
 }
 
+/* Variables */
 :root {
   --color-cerulean: #049ceb;
   --color-charade: #2b2c3c;
@@ -11,66 +13,109 @@
   --color-pinkswan: #c4bcbc;
 }
 
+/* Utilidades de color */
 .bg-cerulean {
-  background-color: var(--color-cerulean)
+  background-color: var(--color-cerulean);
 }
 
 .text-cerulean {
-  color: var(--color-cerulean)
+  color: var(--color-cerulean);
 }
 
 .bg-charade {
-  background-color: var(--color-charade)
+  background-color: var(--color-charade);
 }
 
 .text-charade {
-  color: var(--color-charade)
+  color: var(--color-charade);
 }
 
 .bg-silver {
-  background-color: var(--color-silver)
+  background-color: var(--color-silver);
 }
 
 .text-silver {
-  color: var(--color-silver)
+  color: var(--color-silver);
 }
 
 .bg-pinkswan {
-  background-color: var(--color-pinkswan)
+  background-color: var(--color-pinkswan);
 }
 
 .text-pinkswan {
-  color: var(--color-pinkswan)
+  color: var(--color-pinkswan);
 }
 
 .hero-section {
-  height: 80vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    flex-direction: row;
+  }
 }
 
 .hero-left {
-  width: 50%;
-  background: linear-gradient(90deg, rgb(78, 77, 77) 0%, rgba(255, 255, 255, 1) 100%, rgba(83, 91, 237, 1) 100%);
+  background: linear-gradient(90deg, #4e4d4d 0%, #ffffff 100%);
   color: white;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .hero-left {
+    background: linear-gradient(180deg, #4e4d4d 0%, #ffffff 100%);
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-left {
+    width: 50%;
+    text-align: left;
+    padding: 4rem;
+    align-items: flex-start;
+  }
 }
 
 .hero-right {
-  width: 50%;
+  width: 100%;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .hero-right {
+    width: 50%;
+  }
 }
 
 .hero-right img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  max-width: 100%;
 }
 
-/* configuración del boton */
-
+/* Botón personalizado */
 .btn-btsoft {
-  background-color: #049ceb;
+  background-color: var(--color-cerulean);
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -88,7 +133,7 @@
   color: white;
 }
 
-/* configuración de las letras del nav-bar */
+/* Navbar */
 .navbar-nav .nav-link {
   margin-right: 1.5rem;
   font-weight: 500;
@@ -97,12 +142,10 @@
   min-width: 140px;
 }
 
-/* Secciones */
-
+/* Sección de servicios con fondo */
 .hero-bg-services {
   position: relative;
-  background-image: linear-gradient(rgba(43, 44, 60, 0.6),
-      rgba(43, 44, 60, 0.6)),
+  background-image: linear-gradient(rgba(43, 44, 60, 0.6), rgba(43, 44, 60, 0.6)),
     url('../images/fondo-services.png');
   background-size: cover;
   background-position: center;
@@ -111,4 +154,6 @@
   color: white;
   display: flex;
   align-items: center;
+  padding: 4rem 2rem;
+  text-align: center;
 }
