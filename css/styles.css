@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+:root {
+  --color-cerulean: #049ceb;
+  --color-charade: #2b2c3c;
+  --color-silver: #c4c4c4;
+  --color-pinkswan: #c4bcbc;
+}
+
+.bg-cerulean {
+  background-color: var(--color-cerulean)
+}
+
+.text-cerulean {
+  color: var(--color-cerulean)
+}
+
+.bg-charade {
+  background-color: var(--color-charade)
+}
+
+.text-charade {
+  color: var(--color-charade)
+}
+
+.bg-silver {
+  background-color: var(--color-silver)
+}
+
+.text-silver {
+  color: var(--color-silver)
+}
+
+.bg-pinkswan {
+  background-color: var(--color-pinkswan)
+}
+
+.text-pinkswan {
+  color: var(--color-pinkswan)
+}
+
+.hero-section {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+}
+
+.hero-left {
+  width: 50%;
+  background: linear-gradient(90deg, rgb(78, 77, 77) 0%, rgba(255, 255, 255, 1) 100%, rgba(83, 91, 237, 1) 100%);
+  color: white;
+}
+
+.hero-right {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* configuración del boton */
+
+.btn-btsoft {
+  background-color: #049ceb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  min-width: 170px;
+  text-align: center;
+}
+
+.btn-btsoft:hover {
+  background-color: #037ac0;
+  color: white;
+}
+
+/* configuración de las letras del nav-bar */
+.navbar-nav .nav-link {
+  margin-right: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-family: 'Montserrat', sans-serif;
+  min-width: 140px;
+}
+
+/* Secciones */
+
+.hero-bg-services {
+  position: relative;
+  background-image: linear-gradient(rgba(43, 44, 60, 0.6),
+      rgba(43, 44, 60, 0.6)),
+    url('../images/fondo-services.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  color: white;
+  display: flex;
+  align-items: center;
+}
